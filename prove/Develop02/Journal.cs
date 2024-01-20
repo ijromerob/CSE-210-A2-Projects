@@ -26,7 +26,7 @@ public class Journal
         {
             foreach (Entry ent in _entries)
             {
-                outputFile.WriteLine($"{ent._date}~~{ent._promptText}~~{ent._entryText}");
+                outputFile.WriteLine($"{ent._date}~~{ent._promptText}~~{ent._entryText}~~{ent._blessings}");
             }
         }
     }
@@ -42,6 +42,7 @@ public class Journal
             newEntry._date = parts[0];
             newEntry._promptText = parts[1];
             newEntry._entryText = parts[2];
+            newEntry._blessings = parts[3];
             AddEntry(newEntry);
         }
     }
