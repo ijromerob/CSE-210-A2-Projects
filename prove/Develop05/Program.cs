@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        // For exceeding requirements I added 10 levels within the method LevelDisplay()
+        //This can be found in the Goal Manager class.
+        
+        GoalManager g = new GoalManager();
+        g.Start();
     }
 }
