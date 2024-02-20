@@ -11,13 +11,14 @@ public class Supplies
         _unitaryCost = unitaryCost;
         _amount = amount;
     }
-    public string GetName()
-    {
-        return _name;
-    }
     public float GetCost()
     {
         float cost = _unitaryCost * _amount;
         return cost;
+    }
+    public string DisplaySupplies()
+    {
+        string supply = $"{_name}: Unitary Cost ${_unitaryCost} x Amount {_amount} = ${GetCost()}";
+        return supply;
     }
 }

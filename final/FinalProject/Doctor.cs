@@ -1,21 +1,15 @@
 public class Doctor:Employee
 {
-    public Doctor(float smallFee, float surgeryFee):base(smallFee,surgeryFee)
+    public Doctor(float smallFee, float surgeryFee, string name):base(smallFee,surgeryFee,name)
     {
         _smallFee = smallFee;
         _surgeryFee = surgeryFee;
+        _name = name;
     }
-    
-    
-    public override float GetFee(bool check)
-    {
-        if (check)
-        {
-            return _smallFee * 2;
-        }
-        else
-        {
-            return _surgeryFee * 5;
-        }
+
+    public override string Display()
+    {   
+        string display = $"Dr. {_name} Fee: ${GetFee()}";
+        return display;
     }
 }

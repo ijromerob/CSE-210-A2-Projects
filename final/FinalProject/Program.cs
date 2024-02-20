@@ -14,6 +14,7 @@ class Program
         // Nurses
         //Doctors
         // Class for the supplies is created
-        Console.Write("");
+        Manager theManager = new Manager();
+        theManager.Run();
     }
 }

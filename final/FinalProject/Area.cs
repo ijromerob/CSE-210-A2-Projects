@@ -8,7 +8,7 @@ public abstract class Area
 
     public string DisplayAreaCost()
     {
-        string AreaCost = $"{_areaName}~{CostOfUse()}";
+        string AreaCost = $"{_areaName} Cost of use: ${CostOfUse()}";
         return AreaCost;
     }
 }

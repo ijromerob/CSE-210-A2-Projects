@@ -1,23 +1,15 @@
 public class Nurse: Employee
 {
     // Attributes
-    public Nurse(float smallFee, float surgeryFee):base(smallFee,surgeryFee)
+    public Nurse(float smallFee, float surgeryFee, string name):base(smallFee,surgeryFee, name)
     {
         _smallFee = smallFee;
         _surgeryFee = surgeryFee;
+        _name = name;
     }
-    // this will check if the which fee will be applied 
-    public override float GetFee(bool check)
-    {   
-        //if true then will have small check
-        if (check)
-        {
-            return _smallFee;
-        }
-        else
-        {
-            return _surgeryFee;
-        }
-
+    public override string Display()
+    {
+        string display = $"Nurse: {_name} Fee: ${GetFee()}";
+        return display;
     }
 }
